@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --bg: #ffedd8;
+    --text: #583101;
+    --links: #a47148;
+    --rdmbg: #d4a276;
+    --footer: #ffedd8;
+    --footertext: #583101;
+    --rdmtext: #f9f9f9;
+    --hover: #BA2D0B;
+    --cta: #ba2d04;
+    --top-menu: #ffedd8;
+    --midlle-menu: #ffedd8;
+    --font-primary: 'Lora', serif;
+    --font-title: 'Montserrat', sans-serif;
+
+
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Desktop Start */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+
+}
+
+
+
+.mid-navbar {
+    width: 0;
+    height: 3.5vh;
+    background-color: var(--footertext);
+    padding: 3rem;
+    border-radius: 5rem;
+    position: relative;
+}
+
+.change .mid-navbar {
+    width: 100%;
+}
+
+.icons {
+    font-size: 2rem;
+    color: var(--footer);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change .icons {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.dots-btn {
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--footertext);
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba(13, 83, 57, 0.4);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--top-menu);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+
+
+
+
+
+.change .dot-1 {
+    width: 0.8rem;
+    height: 7rem;
+
+
+    transform: rotate(-45deg) translateY(16px) translateX(16px);
+
+}
+
+.change .dot-2 {
+    display: none;
+}
+
+.change .dot-3 {
+    width: 0.8rem;
+    height: 7rem;
+
+    transform: rotate(45deg) translateY(16px) translateX(-16px);
+
+
+
+
+}
+
+/* Discord */
+.icons:nth-child(1) {
+    left: 1rem;
+}
+
+/* FB */
+.icons:nth-child(2) {
+    left: 6rem;
+}
+
+.icons:nth-child(3) {
+    right: 1rem;
+
+}
+
+.icons:nth-child(4) {
+    right: 6rem;
+}
+
+/* Insta */
+.icons:nth-child(5) {
+    left: 11rem;
+}
+
+.icons:nth-child(6) {
+    right: 11rem;
+
+}
+
+/* Desktop End */
+
+@media only screen and (max-width: 767px) {
+    .dots-btn {
+        width: 70%;
+        height: 50%;
+        box-shadow: none;
+    }
+
+
+    .change .dot-1 {
+        /* display: none; */
+        position: absolute;
+        top: -8rem;
+        background: var(--text);
+        transform: rotate(-45deg) translateY(-16px) translateX(-16px);
+
+    }
+
+    .change .dot-3 {
+        /* display: none; */
+        position: absolute;
+        top: -8rem;
+        background: var(--text);
+        transform: rotate(45deg) translateY(16px) translateX(-16px);
+
+
+    }
+
+    /* fb */
+    .icons:nth-child(2) {
+        /* display: none; */
+        top: 2rem;
+        transform: translateX(-1.7rem)
+    }
+
+    /* gwiazdki */
+    .icons:nth-child(6) {
+        top: 2rem;
+
+        /* display: none; */
+        transform: translateX(1.4rem)
+    }
+
+    /* 5/insta */
+    .icons:nth-child(5) {
+        top: 2rem;
+        transform: translateX(0.1rem)
+    }
+
+    .icons:nth-child(4) {
+        /* justify-content: flex-end; */
+        top: 2rem;
+        transform: translateX(2.5rem)
+    }
+
+
+    /* księżyc */
+
+
+
+}
+
+/* Mq for IP5 */
+@media(max-width:320px) {
+
+    .icons:nth-child(4) {
+
+        transform: translateX(1rem)
+    }
+
+    .icons:nth-child(6) {
+
+        transform: translateX(3.6rem)
+    }
+}
+
+
+
+
+
+
+
+/* Mq for 416 px */
+@media(width:411px) {
+    .icons:nth-child(2) {
+
+        transform: translateX(-1rem)
+    }
+
+    .icons:nth-child(6) {
+
+        transform: translateX(-1rem)
+    }
+
+    .icons:nth-child(4) {
+
+        transform: translateX(1rem)
+    }
+
+    .icons:nth-child(3) {
+        transform: translateX(-2rem);
+        top: 2rem;
+    }
+}
+
+@media(width:414px) {
+    .icons:nth-child(2) {
+
+        transform: translateX(-1rem)
+    }
+
+    .icons:nth-child(6) {
+
+        transform: translateX(-1rem)
+    }
+
+    .icons:nth-child(4) {
+
+        transform: translateX(1rem)
+    }
+
+    .icons:nth-child(3) {
+        transform: translateX(-2rem);
+        top: 2rem;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    .mid-navbar {
+        top: -12rem;
+    }
+
+}
